@@ -124,7 +124,7 @@ const App = () => {
       const duration = await getVideoDuration(file);
       
       if (duration <= 3) {
-        throw new Error('Video is too short (3 seconds or less). Cannot trim 3 seconds.');
+        throw new Error('Video is too short (5 seconds or less). Cannot trim 5 seconds.');
       }
 
       const videoFile: VideoFile = {
@@ -165,7 +165,7 @@ const App = () => {
       
       console.log("Trimming video");
       // Calculate the end time (duration - 3 seconds)
-      const endTime = duration - 3;
+      const endTime = duration - 5;
       
       // Run FFmpeg command to trim the video
       await ffmpeg.exec([
